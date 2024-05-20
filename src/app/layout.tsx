@@ -4,6 +4,7 @@ import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 import { ThemeProvider } from "@/providers/theme-provider";
+import Layout from "@/components/layouts";
 
 export const metadata: Metadata = {
     title: "Create Next App",
@@ -24,7 +25,9 @@ export default function RootLayout({
                     enableSystem
                     disableTransitionOnChange
                 >
+                  <Layout>
                     {children}
+                  </Layout>
                 </ThemeProvider>
             </body>
         </html>
